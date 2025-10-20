@@ -15,6 +15,12 @@ public class Main {
         int[] usbLaufwerke = {20, 15, 40, 15};
         int teuerster = shopUtils.findMostExpensiveItem(tastaturen2, usbLaufwerke);
         System.out.println("Teuerster Gegenstand: " + teuerster);
+
+        // 3. Teuerstes USB Laufwerk unter Budget finden
+        int[] usbPreise = {15, 45, 20};
+        int budget = 30;
+        int teuerstesUsb = shopUtils.findMostExpensiveUsbUnderBudget(usbPreise, budget);
+        System.out.println("Teuerstes USB Laufwerk unter Budget: " + teuerstesUsb);
     }
 
     public static void main(String[] args) {
