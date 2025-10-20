@@ -37,4 +37,18 @@ public class ShopUtils {
         }
         return maxAffordable;
     }
+
+    // 4. Methode: Finde den maximalen ausgegebenen Geldbetrag für Tastatur + USB Laufwerk
+    public int findMaxSpent(int[] keyboardPrices, int[] usbPrices, int budget) {
+        int maxSpent = -1;
+        for (int i = 0; i < keyboardPrices.length; i++) {
+            for (int j = 0; j < usbPrices.length; j++) {
+                int total = keyboardPrices[i] + usbPrices[j];
+                if (total <= budget && total > maxSpent) {
+                    maxSpent = total;
+                }
+            }
+        }
+        return maxSpent;
+    }
 }
