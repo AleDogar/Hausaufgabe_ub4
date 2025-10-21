@@ -69,7 +69,6 @@ public class ShopUtils {
 
         int max = -1;
 
-        // buclă în buclă — verificăm toate combinațiile
         for (int i = 0; i < keyboardPrices.length; i++) {
             for (int j = 0; j < usbPrices.length; j++) {
                 int total = keyboardPrices[i] + usbPrices[j];
