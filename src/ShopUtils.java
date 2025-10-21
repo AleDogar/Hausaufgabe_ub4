@@ -3,13 +3,13 @@ public class ShopUtils {
     // 1. Methode: Finde den billigsten Preis einer Tastatur
     public int findCheapestKeyboard(int[] keyboardPrices) {
         if (keyboardPrices == null || keyboardPrices.length == 0) {
-            return -1; // dacă lista e goală
+            return -1;
         }
 
-        int min = keyboardPrices[0]; // presupunem că primul e cel mai mic
+        int min = keyboardPrices[0];
         for (int i = 1; i < keyboardPrices.length; i++) {
             if (keyboardPrices[i] < min) {
-                min = keyboardPrices[i]; // găsim unul mai mic
+                min = keyboardPrices[i];
             }
         }
         return min;
@@ -17,7 +17,6 @@ public class ShopUtils {
 
     // 2. Methode: Finde den teuersten Gegenstand
     public int findMostExpensiveItem(int[] keyboardPrices, int[] usbPrices) {
-        // dacă ambele liste sunt goale sau nule
         if ((keyboardPrices == null || keyboardPrices.length == 0) &&
                 (usbPrices == null || usbPrices.length == 0)) {
             return -1;
